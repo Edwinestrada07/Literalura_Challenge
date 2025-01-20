@@ -14,6 +14,7 @@ public class Principal {
     public void muestraElMenu() {
         var json = consumoAPI.obtenerDatos(URL_BASE);
         System.out.println(json);
+        //var datos = conversor.obtenerDatos(json,Datos.class);
     }
 
 }
