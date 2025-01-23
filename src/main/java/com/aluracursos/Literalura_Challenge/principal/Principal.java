@@ -1,5 +1,6 @@
 package com.aluracursos.Literalura_Challenge.principal;
 
+import com.aluracursos.Literalura_Challenge.model.ResultadoAPI;
 import com.aluracursos.Literalura_Challenge.service.ConsumoAPI;
 import com.aluracursos.Literalura_Challenge.service.ConvierteDatos;
 
@@ -13,8 +14,11 @@ public class Principal {
 
     public void muestraElMenu() {
         var json = consumoAPI.obtenerDatos(URL_BASE);
-        System.out.println(json);
-        //var datos = conversor.obtenerDatos(json,Datos.class);
+        //System.out.println(json);
+        var datos = conversor.obtenerDatos(json,ResultadoAPI.class);
+        System.out.println(datos);
     }
 
+    //Top 10 libros mas descargados
+    
 }
