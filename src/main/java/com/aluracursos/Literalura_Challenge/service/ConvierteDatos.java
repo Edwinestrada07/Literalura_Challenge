@@ -6,7 +6,7 @@ package com.aluracursos.Literalura_Challenge.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class ConvierteDatos implements IConvierteDatos {
+public class ConvierteDatos implements IConvierteDatos { //La palabra clave implements se utiliza para implementar una interfaz en una clase. 
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override

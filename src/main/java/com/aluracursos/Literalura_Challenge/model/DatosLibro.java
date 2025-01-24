@@ -1,5 +1,5 @@
 package com.aluracursos.Literalura_Challenge.model;
-// Clase que mapea los datos de un libro obtenidos de la API de Literatura API a un objeto Java.
+// Clase que mapea los datos de un libro obtenidos de la API de GutendexAPI a un objeto Java.
 // Utiliza anotaciones de Jackson para ignorar campos desconocidos y mapear claves JSON específicas a los campos:
 // - "title" -> titulo (String)
 // - "authors" -> autor (List<DatosAutor>)
@@ -15,8 +15,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record DatosLibro(
     @JsonAlias("title") String titulo,
-    @JsonAlias("authors") List<DatosAutor> autor,
-    @JsonAlias("languages") List<String> idiomas,
-    @JsonAlias("download_count") Double numeroDeDescargas
+    @JsonAlias("languages") String lenguaje,
+    @JsonAlias("formats") Formats formats,
+    @JsonAlias("download_count") Double numeroDeDescargas,
+    @JsonAlias("authors") List<DatosAutor> autor
 ) {
 }
